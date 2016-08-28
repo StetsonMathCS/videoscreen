@@ -8,6 +8,8 @@
             margin: 0;
         }
     </style>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/jQuery.date.min.js"></script>
 </head>
 <body>
 <div style="background: url(images/chautauqua-logo-notext.jpg); width: 100%; height: 100%; position: relative;">
@@ -15,11 +17,8 @@
 <div style="position: absolute; top: 720; left: 75; font-size: 70px; font-family: Arial Black;">
     Test title<br/>
 <script type="text/javascript">
-var currentDate = new Date();
-var day = currentDate.getDate();
-var month = currentDate.getMonth() + 1;
-var year = currentDate.getFullYear();
-document.write("<b>" + day + "/" + month + "/" + year + "</b>");
+var currentDate = $.date(new Date(), 'format', 'm-d-Y h:i:s');
+document.write(currentDate);
 </script>
 </div>
 
