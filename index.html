@@ -10,10 +10,20 @@
     </style>
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/jQuery.date.min.js"></script>
+    <script type="text/javascript">
+        var images = ["acm-meeting.jpg", "grad-school-workshop.jpg", "internship-showcase.jpeg",
+                      "fall-networking-recruitment-fair.jpg"];
+
+        $(document).ready(function() {
+            var image = images[Math.floor(Math.random() * images.length)];
+            $('#image').css("background", "url(images/"+image+") no-repeat");
+        });
+    </script>
 </head>
 <body>
-<div style="background: url(images/chautauqua-logo-notext.jpg); width: 100%; height: 100%; position: relative;">
+<div id="image" style="width: 100%; height: 100%; position: relative;">
 
+<!--
 <div style="position: absolute; top: 720; left: 75; font-size: 70px; font-family: Arial Black;">
     Test title<br/>
 <script type="text/javascript">
@@ -21,6 +31,7 @@ var currentDate = $.date(new Date(), 'format', 'm-d-Y h:i:s');
 document.write(currentDate);
 </script>
 </div>
+-->
 
 </div>
 </body>
